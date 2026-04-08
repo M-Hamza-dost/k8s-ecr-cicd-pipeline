@@ -1,8 +1,10 @@
 name: Build and Push to ECR
 
 on:
-  push:
+  pull_request:
     branches: [ "main" ]
+    paths:
+      - 'app/**'
 
 permissions:
   id-token: write 
